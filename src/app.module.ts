@@ -1,3 +1,4 @@
+import { HeaderModule } from './dadoscadastro/header.module';
 import { DatabaseModule } from './database/database.module';
 import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
@@ -8,6 +9,7 @@ import configuracao from './config/configuracao';
 
 @Module({
   imports: [
+    HeaderModule,
     DatabaseModule,
     AuthModule, ConfigModule.forRoot({
       load: [configuracao],
@@ -15,6 +17,6 @@ import configuracao from './config/configuracao';
     })],
   controllers: [AppController],
   providers: [AppService],
-  
+
 })
 export class AppModule { }

@@ -8,11 +8,11 @@ export class DatabaseService {
         this.knex = knexfn({
             client: 'mysql2',
             connection:{
-                host: "kdkdjd",
+                host: "localhost",
                 port: 3306,
-                user:"usuario",
-                password:"senha",
-                database:"database"
+                user:"root",
+                password:"gemmaN123_",
+                database:"sys"
             }
         })
     }
